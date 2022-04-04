@@ -42,7 +42,7 @@
                         @csrf
                         @method('DELETE')
 
-                        <button type="submit" class="btn btn-danger">Удалить</button>
+                        <button type="submit" onclick='delete()' id="delete" class="btn btn-danger">Удалить</button>
                     </form>
                 </td>
                 @endforeach
@@ -53,3 +53,15 @@
 
 
 @endsection
+
+
+<script>
+    function delete() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
